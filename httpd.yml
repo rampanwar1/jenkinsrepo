@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - name: iwant to install httpd server
+      yum:
+         name: httpd
+         state: started
+    - name: iwant to reate files
+      file: 
+           src: /var/www/html/index.html
+           content: "hellow how are you"
+
+
